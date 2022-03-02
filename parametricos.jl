@@ -32,7 +32,6 @@ println("$x * $y = $(producto(x,y))")
 
 function sumaArray(vec::Array{T})::T where T <: Number
 	resultado::T = 0
-	
 	for v in vec
 		resultado += v
 	end

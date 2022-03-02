@@ -7,13 +7,32 @@ end
 
 println("Vector : $A")
 
-
-function Suma(A::Array)
-	resultado::Int = 0
+function Producto(A::Array)
+	resultado::Int = 1
 	for i in A
-		resultado += i
+		resultado *= i
 	end
 	return resultado
 end
 
-println("La suma es = $(Suma(A))")	
+function Promedio(n::Int32, A::Array{Int32})
+	resultado::Number = 0
+	for i in A
+		resultado += i
+	end
+	resultado /= n
+	return resultado
+end
+
+println("El producto es = $(Producto(A))")	
+println("El promedio es = $(Promedio(n, A))")
+
+
+
+
+
+
+
+
+
+	
