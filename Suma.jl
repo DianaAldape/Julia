@@ -1,10 +1,12 @@
 struct Dato
-	x::Int
-	y::Int
+	x::Number
+	y::Number
 end
 
-d1 = Dato(2,3)
-d2 = Dato(3,4)
+
+
+d1 = Dato(2,3.5589)
+d2 = Dato(2//3,4)
 
 sum(x::Int, y::Int)  = x+y
 sum(x::Float64, y::Float64)= x+y
@@ -15,4 +17,4 @@ println(sum(2.2,3.6))
 println(sum(d1,d2))
 
 
-println(methods(sum))
+#println(methods(sum))
