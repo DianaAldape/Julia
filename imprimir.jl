@@ -12,6 +12,10 @@ struct Fecha
 	ano::Int
 end
 
+struct Saludo
+	s::String
+end
+
 function imprimirHora(tiempo)
 	@printf("%02d:%02d:%02d\n", tiempo.hora, tiempo.minuto, tiempo.segundo)
 end
@@ -20,10 +24,16 @@ function imprimirFecha(tiempo)
 	@printf("%02d-%02d-%04d\n", tiempo.dia, tiempo.mes, tiempo.ano)
 end
 
-inicio = Hora(9,45,0)
-hoy = Fecha(2,3,2022)
+function imprimirSaludo(mensaje)
+	@printf("\n\n\t%s\n\n", mensaje.s)
+end
 
-imprimirHora(inicio)
+hora = Hora(9,45,0)
+hoy = Fecha(2,3,2022)
+sal = Saludo("BIENVENIDO")
+
+imprimirSaludo(sal)
+imprimirHora(hora)
 imprimirFecha(hoy)
 
 
