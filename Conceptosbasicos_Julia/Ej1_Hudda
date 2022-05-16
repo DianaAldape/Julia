@@ -1,0 +1,10 @@
+using BenchmarkTools
+using LinearAlgebra
+A=rand(1000,1000)
+@btime norm(A)
+
+function timing_from_a_function()
+    B=rand(100,100)
+    @btime norm(B)
+end
+timing_from_a_function()
